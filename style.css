@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+html, body:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-120deg, rgba(16, 63, 111, 0.8) 65%, #70c1b3);
+}
+
+html, body {
+  background: url("http://www.vectorfree.com/media/vectors/modern-cartoon-city.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.profile {
+  background: rgba(255, 255, 255, 0.9);
+  width: 20em;
+  border-radius: 0.2em;
+  border-bottom: 5px solid #70c1b3;
+}
+.profile__avatar {
+  background: url("https://cdn.discordapp.com/attachments/695050506510401577/695052491091345438/spotifylogo.png");
+  background-size: cover;
+  border: 5px solid #70c1b3;
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-animation: avatarFadeIn 0.65s 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: avatarFadeIn 0.65s 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+.profile h1, .profile h2 {
+  color: #70c1b3;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  opacity: 0;
+}
+.profile h1 {
+  font-size: 1.7em;
+  -webkit-animation: fadeIn 0.65s 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: fadeIn 0.65s 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.profile h2 {
+  font-size: 0.75em;
+  font-weight: 400;
+  -webkit-animation: fadeIn 0.65s 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: fadeIn 0.65s 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.profile__social {
+  margin: 2em auto;
+  text-align: center;
+  display: block;
+  color: #70c1b3;
+  font-size: 1em;
+}
+.profile__social a {
+  text-decoration: none;
+}
+
+i {
+  background: #70c1b3;
+  color: #FFF;
+  border: 5px solid #70c1b3;
+  border-radius: 100%;
+  padding: 0.7em;
+  margin: 1.5em 1.8em;
+  opacity: 0;
+  cursor: pointer;
+}
+i:hover:after {
+  content: attr(dataName);
+  background: #70c1b3;
+  color: #FFF;
+  padding: 0.7em;
+  border-radius: 3px;
+  position: absolute;
+  margin: -6em -3em;
+  font-size: 0.7em;
+  width: 70px;
+  text-align: center;
+  display: block;
+}
+
+.bubbles:nth-of-type(1), .bubbles:nth-of-type(2), .bubbles:nth-of-type(3), .bubbles:nth-of-type(4), .bubbles:nth-of-type(5) {
+  background: url("http://www.taftpubliclibrary.org/wp-content/uploads/2015/06/bubble_mania.jpg") rgba(255, 255, 255, 0.7);
+  background-size: cover;
+  border-radius: 100%;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  z-index: -1;
+}
+
+.bubbles:nth-of-type(1) {
+  left: 35vw;
+  top: 800px;
+  -webkit-animation: float 17s 0s linear infinite forwards;
+          animation: float 17s 0s linear infinite forwards;
+}
+
+.bubbles:nth-of-type(2) {
+  left: 100vw;
+  top: 400px;
+  -webkit-animation: float 17s 0s linear infinite forwards;
+          animation: float 17s 0s linear infinite forwards;
+}
+
+.bubbles:nth-of-type(3) {
+  left: 105vw;
+  top: 266.6666666667px;
+  -webkit-animation: float 17s 0s linear infinite forwards;
+          animation: float 17s 0s linear infinite forwards;
+}
+
+.bubbles:nth-of-type(4) {
+  left: 132vw;
+  top: 200px;
+  -webkit-animation: float 17s 0s linear infinite forwards;
+          animation: float 17s 0s linear infinite forwards;
+}
+
+.bubbles:nth-of-type(5) {
+  left: 240vw;
+  top: 160px;
+  -webkit-animation: float 17s 0s linear infinite forwards;
+          animation: float 17s 0s linear infinite forwards;
+}
+
+i:nth-of-type(1) {
+  -webkit-animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+i:nth-of-type(2) {
+  -webkit-animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+
+i:nth-of-type(3) {
+  -webkit-animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: 5.1s;
+          animation-delay: 5.1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes avatarFadeIn {
+  from {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    opacity: 1;
+  }
+}
+@keyframes avatarFadeIn {
+  from {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes float {
+  from {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  to {
+    -webkit-transform: translateY(-1500px);
+            transform: translateY(-1500px);
+  }
+}
+@keyframes float {
+  from {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  to {
+    -webkit-transform: translateY(-1500px);
+            transform: translateY(-1500px);
+  }
+}
